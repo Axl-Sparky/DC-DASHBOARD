@@ -10,9 +10,6 @@
       color: #fff;
       padding: 30px;
     }
-    h2 {
-      margin-bottom: 20px;
-    }
     input {
       width: 300px;
       padding: 10px;
@@ -45,7 +42,6 @@
   <input id="footer" placeholder="Footer"><br>
 
   <button onclick="save()">Save</button>
-
   <div id="status"></div>
 
   <script>
@@ -55,7 +51,7 @@
       status.style.color = "#ffaa00";
 
       try {
-        const res = await fetch("/api/live-time", {
+        const res = await fetch("http://154.26.138.226:1727/api/live-time", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
